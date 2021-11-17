@@ -72,7 +72,7 @@ const PaymentForm = ({ serviceInfo }) => {
             .then(res => {
                 toast.dismiss(loading);
                 if (res.data) {
-                    return swal("Payment successful", "Your booking and payment has been successful.", "success");
+                    return swal("Payment system coming soon");
                 }
                 swal("Failed!", "Something went wrong! Please try again.", "error", { dangerMode: true });
             })

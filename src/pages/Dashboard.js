@@ -65,7 +65,7 @@ const Dashboard = ({ adminLoading }) => {
                     : panel === "profile" ? <Profile />
                     : panel === "orderList" && isAdmin ? <OrderList />
                     : panel === "addService" && isAdmin ? <AddService />
-                    : panel === "makeAdmin" && isAdmin ? <MakeAdmin />
+                    : panel === "makeAdmin" && isAdmin  ? <MakeAdmin />
                     : panel === "manageServices" && isAdmin ? <ManageService />
                     : panel === "book" ? <Book />
                     : panel === "bookingList" ? <BookingList />

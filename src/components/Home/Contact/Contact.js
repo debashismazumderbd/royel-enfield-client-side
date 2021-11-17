@@ -12,7 +12,7 @@ const Contact = () => {
 
     const onSubmit = data => {
         const loading = toast.loading('Please wait...!');
-        emailjs.send('gmail', 'gerez_template', data, 'user_UhuudhC7XpS5QUo7xDWsT')
+        emailjs.send('gmail', 'royel_template', data, 'user_UhuudhC7XpS5QUo7xDWsT')
             .then((res) => {
                 toast.dismiss(loading);
                 if (res.text === "OK") {

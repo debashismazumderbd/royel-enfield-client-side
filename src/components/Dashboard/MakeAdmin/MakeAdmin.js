@@ -12,9 +12,9 @@ const MakeAdmin = () => {
     const { register, handleSubmit } = useForm();
 
     const onSubmit = data => {
-        if (email === "test@admin.com") {
-            return swal("Permission restriction!", "As a test-admin, you don't have this permission.", "info");;
-        }
+        // if (email === "admin@admin.com") {
+        //     return swal("Permission restriction!", "As a test-admin, you don't have this permission.", "info");;
+        // }
         const loading = toast.loading('Adding...Please wait!');
         axios.post('http://localhost:5000/addAdmin', data)
             .then(res => {

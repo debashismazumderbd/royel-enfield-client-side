@@ -32,7 +32,7 @@ const ManageService = () => {
                 matchedID = true;
             }
         }
-        if (email === "test@admin.com" && matchedID) {
+        if (email === "admin@admin.com" && matchedID) {
             return true;
         }
         return false;

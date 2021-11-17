@@ -17,7 +17,7 @@ const Book = () => {
     const [services, setServices] = useState([]);
 
     const options = services.map(service => ({ value: service.title, label: service.title, price: service.price }));
-    const defaultOption = title ? { value: title, label: title, price: price } : options[0] || { value: "Engine Repair", label: "Engine Repair", price: 25 };
+    const defaultOption = title ? { value: title, label: title, price: price } : options[0] || { value: "Choose Model", label: "Choose Model", price: 0 };
 
     const [selectedOption, setSelectedOption] = useState(defaultOption);
     const serviceInfo = services.find(service => service.title === selectedOption.value);
@@ -57,11 +57,11 @@ const Book = () => {
                     <img src={infoEmojis} className="rounded mr-2" alt="Info" />
                     <strong className="mr-auto">Important Info</strong>
                 </Toast.Header>
-                <Toast.Body className="text-center">
+                {/* <Toast.Body className="text-center">
                     Use this Card Number to test the payment
                     <br />
-                    <b>4242 4242 4242 4242</b>
-                </Toast.Body>
+                     <b>4242 4242 4242 4242</b> 
+                </Toast.Body> */}
             </Toast>
 
             <section>

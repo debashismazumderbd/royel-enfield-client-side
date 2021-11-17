@@ -77,14 +77,12 @@ const Login = () => {
         setShowModal(false);
         history.replace(from);
         toast.success('Successfully Logged In!');
-        if (res.email === "test@admin.com") {
+        if (res.email === "admin@admin.com") {
             swal({
                 title: "Warning!",
                 content: (
                     <p>
-                        You have entered the admin panel for testing.
-                        <br />
-                        <b>Please do not abuse this facility!</b>
+                        
                     </p>
                 ),
                 icon: "warning",
@@ -119,11 +117,11 @@ const Login = () => {
                         <form onSubmit={handleSignIn(onSubmit)}>
                             <label>
                                 <span>Email</span>
-                                <input defaultValue="test@admin.com" {...registerSignIn("email", { required: true })} type="email" />
+                                <input  {...registerSignIn("email", { required: true })} type="email" />
                             </label>
                             <label>
                                 <span>Password</span>
-                                <input defaultValue="123456" {...registerSignIn("password", { required: true })} type="password" />
+                                <input  {...registerSignIn("password", { required: true })} type="password" />
                             </label>
                             <p className="forgot-pass">Forgot password?</p>
                             <button type="submit" className="submit">Sign In</button>

@@ -29,7 +29,7 @@ const Sidebar = ({ show, adminLoading }) => {
                     height="42"
                     className="d-inline-block align-top"
                 />{' '}
-                <h2 className="d-inline-block">Gerez</h2>
+                <h2 className="d-inline-block">Royel Enfield</h2>
             </div>
             {adminLoading ? <SidebarLoader /> :
                 <ul className="list-unstyled components">
