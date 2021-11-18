@@ -10,7 +10,7 @@ const Services = () => {
     const [services, setServices] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/services')
+        axios.get('https://calm-scrubland-90649.herokuapp.com/services')
             .then(res => {
                 setServices(res.data);
                 setLoading(false);

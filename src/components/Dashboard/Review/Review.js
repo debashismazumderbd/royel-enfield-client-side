@@ -19,7 +19,7 @@ const Review = ({ review: { name, description, address, img, _id }, setEdit }) =
         }).then(wantDelete => {
             if (wantDelete) {
                 const loading = toast.loading('Deleting...Please wait!');
-                axios.delete(`http://localhost:5000/deleteReview/${id}`)
+                axios.delete(`https://calm-scrubland-90649.herokuapp.com/deleteReview/${id}`)
                     .then(res => {
                         toast.dismiss(loading);
                         if (res.data) {

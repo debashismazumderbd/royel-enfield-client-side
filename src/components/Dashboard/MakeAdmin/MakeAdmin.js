@@ -16,7 +16,7 @@ const MakeAdmin = () => {
         //     return swal("Permission restriction!", "As a test-admin, you don't have this permission.", "info");;
         // }
         const loading = toast.loading('Adding...Please wait!');
-        axios.post('http://localhost:5000/addAdmin', data)
+        axios.post('https://calm-scrubland-90649.herokuapp.com/addAdmin', data)
             .then(res => {
                 toast.dismiss(loading);
                 if (res.data) {
