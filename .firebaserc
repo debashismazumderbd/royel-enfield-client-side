@@ -1,7 +1,5 @@
 {
   "projects": {
-    "default": "my-royel",
-    "y": "royal-enfield-9f821"
-  },
-  "targets": {}
+    "default": "Royal-Enfield"
+  }
 }
