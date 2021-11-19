@@ -134,7 +134,7 @@ const PaymentForm = ({ serviceInfo }) => {
                     </Form.Row>
                 </div>
 
-                <div className="text-center mt-4">
+                <div className="mt-4 text-center">
                     <Button type="submit" className="btn-main" disabled={!stripe} style={{ padding: ".68rem 2rem" }}>
                         Pay Now
                     </Button>

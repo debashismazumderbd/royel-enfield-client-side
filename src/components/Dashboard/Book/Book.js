@@ -54,14 +54,14 @@ const Book = () => {
         <>
             <Toast className="toast-right" onClose={() => setShow(false)} show={show} delay={5000} autohide>
                 <Toast.Header>
-                    <img src={infoEmojis} className="rounded mr-2" alt="Info" />
+                    <img src={infoEmojis} className="mr-2 rounded" alt="Info" />
                     <strong className="mr-auto">Important Info</strong>
                 </Toast.Header>
-                {/* <Toast.Body className="text-center">
+                <Toast.Body className="text-center">
                     Use this Card Number to test the payment
                     <br />
                      <b>4242 4242 4242 4242</b> 
-                </Toast.Body> */}
+                </Toast.Body>
             </Toast>
 
             <section>
@@ -79,7 +79,7 @@ const Book = () => {
                             </Col>
                             <Col md={6} xs={12} className="pl-md-4 form-main">
                                 <label style={{ fontWeight: "bold" }}>Price</label>
-                                <div className="form-control w-50 pl-3" style={{ lineHeight: "2", fontWeight: "500" }}>
+                                <div className="pl-3 form-control w-50" style={{ lineHeight: "2", fontWeight: "500" }}>
                                     ${price || selectedOption.price}
                                 </div>
                             </Col>

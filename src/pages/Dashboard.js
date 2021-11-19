@@ -12,6 +12,7 @@ import DashboardNavbar from '../components/Dashboard/DashboardNavbar/DashboardNa
 import MakeAdmin from '../components/Dashboard/MakeAdmin/MakeAdmin';
 import ManageService from '../components/Dashboard/ManageService/ManageService';
 import OrderList from '../components/Dashboard/OrderList/OrderList';
+import PayNow from '../components/Dashboard/PayNow/PayNow';
 import Profile from '../components/Dashboard/Profile/Profile';
 import AddReview from '../components/Dashboard/Review/AddReview';
 import Review, { EditReview } from '../components/Dashboard/Review/Review';
@@ -41,6 +42,7 @@ const Dashboard = ({ adminLoading }) => {
         !adminLoading && isAdmin && (
             panel === "book" ||
             panel === "bookingList" ||
+            panel === "paynow" ||
             panel === "review")
     ) {
         history.replace({ pathname: "/dashboard/profile" });
@@ -63,6 +65,7 @@ const Dashboard = ({ adminLoading }) => {
                 {
                     adminLoading ? <DashboardLoader />
                     : panel === "profile" ? <Profile />
+                    : panel === "paynow" ? <PayNow />
                     : panel === "orderList" && isAdmin ? <OrderList />
                     : panel === "addService" && isAdmin ? <AddService />
                     : panel === "makeAdmin" && isAdmin  ? <MakeAdmin />

@@ -27,7 +27,7 @@ const Sidebar = ({ show, adminLoading }) => {
                     src={Logo}
                     width="42"
                     height="42"
-                    className="d-inline-block align-top"
+                    className="align-top d-inline-block"
                 />{' '}
                 <h2 className="d-inline-block">Royel Enfield</h2>
             </div>
@@ -73,6 +73,11 @@ const Sidebar = ({ show, adminLoading }) => {
                                 </Link>
                             </li>
                             <li>
+                                <Link to="/dashboard/paynow" className={panel === "paynow" ? "link-active" : ""}>
+                                    <FontAwesomeIcon icon={faBook} /> <span>Pay Now</span>
+                                </Link>
+                            </li>
+                            <li>
                                 <Link to="/dashboard/review" className={panel === "review" ? "link-active" : ""}>
                                     <FontAwesomeIcon icon={faCommentDots} /> <span>Review</span>
                                 </Link>
@@ -81,7 +86,7 @@ const Sidebar = ({ show, adminLoading }) => {
                 </ul>}
             <ul className="list-unstyled CTAs">
                 <li>
-                    <Link to="/" className="back-home btn-main text-white">
+                    <Link to="/" className="text-white back-home btn-main">
                         <FontAwesomeIcon icon={faSignOutAlt} /> Back to Home
                     </Link>
                 </li>

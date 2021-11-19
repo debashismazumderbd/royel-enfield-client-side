@@ -2,14 +2,15 @@ import axios from "axios";
 import { createContext, lazy, Suspense, useEffect, useState } from "react";
 import toast, { Toaster } from 'react-hot-toast';
 import {
-    BrowserRouter as Router,
-    Route,
-    Switch
+  BrowserRouter as Router,
+  Route,
+  Switch
 } from "react-router-dom";
 import './App.css';
 import LoadingSpinner from "./components/Home/LoadingSpinner/LoadingSpinner";
 import { getDecodedUser } from "./components/Login/LoginManager";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
+import ServicesPage from "./pages/Services/ServicesPage";
 const Home = lazy(() => import('./pages/Home'));
 const Dashboard = lazy(() => import('./pages/Dashboard'));
 const Login = lazy(() => import('./pages/Login'));
@@ -39,6 +40,9 @@ function App() {
           <Switch>
             <Route exact path="/">
               <Home />
+            </Route>
+            <Route exact path="/services">
+              <ServicesPage />
             </Route>
             <PrivateRoute path="/dashboard/:panel">
               <Dashboard adminLoading={adminLoading} />

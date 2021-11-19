@@ -47,10 +47,10 @@ const NavBar = () => {
             <Navbar.Collapse id="responsive-navbar-nav" className={isCollapsed}>
                 <Nav className="ml-auto">
                     <Nav.Link as={Link} to="/" className="mr-md-5" onClick={() => window.scrollTo(500, 0)} active>Home</Nav.Link>
-                    <Nav.Link
-                        href="#services"
+                    <Nav.Link as={Link}
+                        to="/services"
                         className="mr-md-5" active>
-                        Services
+                        Explore All
                     </Nav.Link>
                     <Nav.Link
                         href="#reviews"

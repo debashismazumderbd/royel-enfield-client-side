@@ -19,7 +19,8 @@ const Services = () => {
     }, [])
 
     return (
-        <section id="services" className="py-5 text-center">
+        <>
+        <section id="services" className="py-5 mt-5 text-center">
             <h5>What We Do</h5>
             <h1>Services We Provide</h1>
             <Row className="pt-5 mx-auto justify-content-center mt-md-5">
@@ -29,6 +30,7 @@ const Services = () => {
                 }
             </Row>
         </section>
+        </>
     );
 };
 
